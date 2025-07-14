@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Libertinus+Math&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Libertinus Math", system-ui;
+}
+body{
+    background: black;
+}
+html, body, #root {
+    height: 100%;
+}

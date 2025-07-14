@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Libertinus+Math&display=swap');
+.main{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 1.5rem;
+}
+#vexa{
+    height: 62%;
+}
+span {
+    font-size: 2.4vmax;
+    background: linear-gradient(to right, rgb(40, 206, 232), rgb(219, 41, 181));
+    background-clip: text;
+    color: transparent;
+}
+button{
+    width: 250px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 22px;
+    background: linear-gradient(rgb(46, 45, 45),rgb(116, 228, 225));
+    border: 1px solid rgb(12, 79, 121);
+    border-radius: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 
+        2px 0 5px #00f0ff, 
+        2px 0 15px #ff00ff
+
+}
+button:hover {
+    box-shadow: 0 0 20px #69c1c1, 0 0 20px #d241a7;
+    transform: scale(1.03);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+#speak{
+    width: 120px;
+}
+p{
+    font-size: 1.3vmax;
+    color: wheat;
+    text-align: center;
+    padding: 0px 40px;
+}
+.response{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap:10px
+}
+#aigif{
+    width: 55vh;
+    height: 100px;
+}
+.auto {
+  color: #99f0ff;
+  font-style: italic;
+  font-size: 1.1vmax;
+}
