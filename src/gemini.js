@@ -4,19 +4,23 @@ import {
   HarmBlockThreshold
 } from "@google/generative-ai";
 
-const api_key = "AIzaSyBKUVConm7PTIoAbre5fg73VfiQxrbcEyY";
-const genAI = new GoogleGenerativeAI(api_key);
+// ✅ Get the API key from env
+const apiKey = import.meta.env.VITE_GOOGLE_API_KEY;
 
+// ✅ Create instance of GoogleGenerativeAI
+const genAI = new GoogleGenerativeAI(apiKey);
+
+// ✅ Get the model
 const model = genAI.getGenerativeModel({
   model: "gemini-1.5-flash"
 });
 
 const generationConfig = {
   responseMimeType: "text/plain",
-  temperature:1,
-  topP:0.95,
-  topK:40,
-  maxOutputTokens:25,
+  temperature: 1,
+  topP: 0.95,
+  topK: 40,
+  maxOutputTokens: 25,
 };
 
 async function run(prompt) {
@@ -26,7 +30,7 @@ async function run(prompt) {
   });
 
   const result = await chatSession.sendMessage(prompt);
-  const reply = result.response.text(); // ✅ FIXED
+  const reply = result.response.text();
   console.log("Gemini response:", reply);
   return reply;
 }
